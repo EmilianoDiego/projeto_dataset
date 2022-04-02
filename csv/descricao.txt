@@ -1,0 +1,19 @@
+Este conjunto de dados contém estatísticas oficiais de crimes de cidades do estado de São Paulo (Brasil) e foram 
+elaborados com base em informações disponíveis no site de estatísticas da Polícia do 
+Estado Civil: http://www.ssp.sp.gov.br/Estatistica/Pesquisa.aspx
+
+Período disponível:
+
+planilha com Ocorrências Mensais de Crime: 2001 - maio de 2021
+planilha com Produtividade da Política: 2001 - maio de 2021
+Observação: em ambos os conjuntos de dados, o separador decimal é um ponto ("".") .
+
+planilha com Taxas de criminalidade (taxas anuais disponíveis): 1999 -2020 
+(disponível para algumas cidades)
+Observação: neste conjunto de dados, o separador decimal é uma vírgula ("",") .
+
+Dados e etiquetas em português brasileiro.
+
+Informações sobre interpretação do tipo de crime (disponível apenas em português do Brasil)
+ em: http://www.ssp.sp.gov.br/Estatistica/download/manual.pdf
+
