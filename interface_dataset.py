@@ -23,7 +23,7 @@ class Ui_MainWindow(object):
         else:   
             self.frame_erro.hide() 
             #busca o dados da tabela csv             
-            dataset = pd.read_csv("D:\\Documentos Windows\\OneDrive\\Área de Trabalho\\dataset\\datasets_crime_estado_sao_paulo\\" + tabela,encoding="latin-1")
+            dataset = pd.read_csv("csv/" + tabela, encoding="latin-1")
             #busca os dados da tabela apartir do tipo de natureza em qual cidade e pelo periodo dos anos contidos na tabela    
             dados = dataset[(dataset.Natureza == natureza) & (dataset.Cidade == cidade)].sort_values("Ano")
             #exibe a tabela no terminal
@@ -90,7 +90,7 @@ class Ui_MainWindow(object):
 "    background-color: rgb(232, 232, 232);\n"
 "}")
         self.comboBox_tabela.setObjectName("comboBox_tabela")
-        self.comboBox_tabela.addItems(["selecione","ds_SSP_ocorrencias_mensais_2001-2019.csv"])
+        self.comboBox_tabela.addItems(["selecione","ocorrencias_mensais_crimes_sp.csv"])
 
 
         self.comboBox_natureza = QtWidgets.QComboBox(self.frame_inferior2)
@@ -101,21 +101,29 @@ class Ui_MainWindow(object):
 "}")
         self.comboBox_natureza.setObjectName("comboBox_natureza")
         self.comboBox_natureza.addItems(["selecione",
-                                  "HOMICÃDIO DOLOSO (2)",
-                                  "NÂº DE VÃTIMAS EM HOMICÃDIO DOLOSO (3)",
-                                  "HOMICÃDIO DOLOSO POR ACIDENTE DE TRÃ‚NSITO",
-                                  "NÂº DE VÃTIMAS EM HOMICÃDIO DOLOSO POR ACIDENTE DE TRÃ‚NSITO",
-                                  "HOMICÃDIO CULPOSO POR ACIDENTE DE TRÃ‚NSITO",
-                                  "HOMICÃDIO CULPOSO OUTROS",
-                                  "TENTATIVA DE HOMICÃDIO",
-                                  "LESÃƒO CORPORAL SEGUIDA DE MORTE",
-                                  "LESÃƒO CORPORAL DOLOSA",
-                                  "LESÃƒO CORPORAL CULPOSA POR ACIDENTE DE TRÃ‚NSITO",
-                                  "LESÃƒO CORPORAL CULPOSA - OUTRAS",
-                                  "LATROCÃNIO",
-                                  "NÂº DE VÃTIMAS EM LATROCÃNIO",
-                                  "TOTAL DE ESTUPRO (4)",
-                                  "TOTAL DE ESTUPRO (4)"])
+                                  "HOMICÍDIO DOLOSO",
+                                  "Nº DE VÍTIMAS EM HOMICÍDIO DOLOSO",
+                                  "HOMICÍDIO DOLOSO POR ACIDENTE DE TRÂNSITO",
+                                  "Nº DE VÍTIMAS EM HOMICÍDIO DOLOSO POR ACIDENTE DE TRÂNSITO",
+                                  "HOMICÍDIO CULPOSO POR ACIDENTE DE TRÂNSITO",
+                                  "HOMICÍDIO CULPOSO OUTROS",
+                                  "TENTATIVA DE HOMICÍDIO",
+                                  "LESÃO CORPORAL SEGUIDA DE MORTE",
+                                  "LESÃO CORPORAL DOLOSA",
+                                  "LESÃO CORPORAL CULPOSA POR ACIDENTE DE TRÂNSITO",
+                                  "LESÃO CORPORAL CULPOSA - OUTRAS",
+                                  "LATROCÍNIO",
+                                  "Nº DE VÍTIMAS EM LATROCÍNIO",
+                                  "TOTAL DE ESTUPRO",
+                                  "ESTUPRO",
+                                  "ESTUPRO DE VULNERÁVEL",
+                                  "TOTAL DE ROUBO - OUTROS",
+                                  "ROUBO - OUTROS",
+                                  "ROUBO DE VEÍCULO",
+                                  "ROUBO A BANCO",
+                                  "ROUBO DE CARGA",
+                                  "FURTO - OUTROS",
+                                  "FURTO DE VEÍCULO"])
 
         self.comboBox_cidade = QtWidgets.QComboBox(self.frame_inferior2)
         self.comboBox_cidade.setGeometry(QtCore.QRect(550, 40, 230, 20))
@@ -125,9 +133,19 @@ class Ui_MainWindow(object):
 "}")
         self.comboBox_cidade.setObjectName("comboBox_cidade")
         self.comboBox_cidade.addItems(["selecione",
-                                  "SÃ£o Paulo",
+                                  "São Paulo",
+                                  "Franco da Rocha",
+                                  "São Lourenço da Serra",
+                                  "Suzano",
+                                  "Taboão da Serra",
+                                  "Vargem Grande Paulista",
+                                  "Aparecida",
+                                  "Areias",
+                                  "Bragança Paulista",
+                                  "Santo André",
+                                  "Campinas"
                                   "Diadema",
-                                  "ItanhaÃ©m",
+                                  "Itanhaém",
                                   "Itapecerica da Serra",
                                   "Itapevi",
                                   "Cotia",
