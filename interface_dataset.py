@@ -23,7 +23,7 @@ class Ui_MainWindow(object):
         else:   
             self.frame_erro.hide() 
             #busca o dados da tabela csv             
-            dataset = pd.read_csv("csv/" + tabela, encoding="latin-1")
+            dataset = pd.read_csv("projeto_dataset/csv/" + tabela, encoding="latin-1")
             #busca os dados da tabela apartir do tipo de natureza em qual cidade e pelo periodo dos anos contidos na tabela    
             dados = dataset[(dataset.Natureza == natureza) & (dataset.Cidade == cidade)].sort_values("Ano")
             #exibe a tabela no terminal

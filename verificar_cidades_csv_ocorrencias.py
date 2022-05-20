@@ -1,7 +1,7 @@
 import pandas as pd
 import csv
 
-file = pd.read_csv("csv\ds_SSP_ocorrencias_mensais_2001-2019.csv",encoding="utf-8")
+file = pd.read_csv("projeto_dataset/csv/ocorrencias_mensais_crimes_sp.csv",encoding="latin-1")
 #arquivo recebe uma lista do file somente da coluna cidade
 arquivo = csv.reader(file["Cidade"])
 
