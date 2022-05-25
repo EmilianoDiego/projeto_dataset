@@ -1,5 +1,7 @@
 
-![Logo](https://see.fontimg.com/api/renderfont4/BW0JV/eyJyIjoiZnMiLCJoIjo2NSwidyI6MTAwMCwiZnMiOjY1LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/Q3JpbWluYWxpZGFkZSBubyBFc3RhZG8gZGUgU8OjbyBQYXVsbw/oasis.png)
+![Logo](https://see.fontimg.com/api/renderfont4/BW0JV/eyJyIjoiZnMiLCJoIjo2NSwidyI6MTAwMCwiZnMiOjY1LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/Q3JpbWluYWxpZGFkZSBubyBFc3RhZG8g/oasis.png)
+
+![Logo](https://see.fontimg.com/api/renderfont4/BW0JV/eyJyIjoiZnMiLCJoIjo2NSwidyI6MTAwMCwiZnMiOjY1LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/ZGUgU8OjbyBQYXVsbw/oasis.png)
 
 [![MIT License](https://img.shields.io/badge/Language-Python-orange)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 [![AGPL License](https://img.shields.io/badge/Dataset-Kaggle-yellow)](http://www.gnu.org/licenses/agpl-3.0)
@@ -15,3 +17,4 @@ Para a construção do projeto a primeira tarefa foi fazer a escolha do dataset.
 - [@Milena](https://www.github.com/)
 - [@Laura](https://www.github.com/)
 ![Logo](https://saojudas.minhaescolha.com.br/images/logo/saojudas-color.png)
+
