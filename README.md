@@ -16,5 +16,6 @@ Para a construção do projeto a primeira tarefa foi fazer a escolha do dataset.
 - [@Raphaela](https://www.github.com/SharkGrr)
 - [@Milena](https://www.github.com/)
 - [@Laura](https://www.github.com/)
+
 ![Logo](https://saojudas.minhaescolha.com.br/images/logo/saojudas-color.png)
 
