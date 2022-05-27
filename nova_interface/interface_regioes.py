@@ -19,48 +19,34 @@ class Ui_MainWindow(object):
         else:
             self.frame_erro.hide()
             # busca o dados da tabela csv
-            dataset = pd.read_csv("projeto_dataset/csv/" + tabela, encoding="latin-1")
+            dataset = pd.read_csv("csv/" + tabela, encoding="latin-1")
             # busca os dados da tabela apartir do tipo de natureza em qual regioes e pelo periodo dos anos contidos na tabela
 
-            grafico = []
-
-            norte = ["Caieiras", "Cajamar", "Francisco Morato", "Franco da Rocha", "Mairiporã"]
-
-            leste = ["Arujá", "Biritiba-Mirim", "Ferraz de Vasconcelos", "Guararema", "Guarulhos", "Itaquaquecetuba",
-                     "Mogi das Cruzes", "Poá", "Salesópolis", "Santa Isabel", "Suzano"]
-
-            sudeste = ["Diadema", "Mauá", "Ribeirão Pires", "Rio Grande da Serra", "Santo André",
-                       "São Bernardo do Campo",
-                       "São Caetano do Sul"]
-
-            sudoeste = ["Cotia", "Embu das Artes", "Embu-Guaçu", "Itapecerica da Serra", "Juquitiba",
-                        "São Lourenço da Serra", "Taboão da Serra", "Vargem Grande Paulista"]
-
-            oeste = ["Barueri", "Carapicuíba", "Itapevi", "Jandira", "Osasco", "Pirapora do Bom Jesus",
-                     "Santana de Parnaíba"]
+#1. Separar os nomes das regiões
+#2. Somar o total de ocorrências selecionada das cidades dentro da regiões
 
             if regioes == "Região Norte":
-                for i, item in norte:
-                    if i == dataset.Cidade:
-                        grafico.insert(i, item)
+
+
+
+# if item == dataset.Cidade["Cidade"].loc[1:100]:
+
             elif regioes == "Região Sudeste":
                 for i, item in sudeste:
                     if i == dataset.Cidade:
-                        grafico.insert(i, item)
             elif regioes == "Região Leste":
                 for i, item in leste:
                     if i == dataset.Cidade:
-                        grafico.insert(i, item)
             elif regioes == "Região Oeste":
                 for i, item in oeste:
                     if i == dataset.Cidade:
-                        grafico.insert(i, item)
             else:
                 for i, item in sudoeste:
                     if i == dataset.Cidade:
-                        grafico.insert(i, item)
-            # TODO
-            dados = dataset[(dataset.Natureza == natureza) & (dataset.regioes == regioes)].sort_values("Ano")
+
+                        # TODO
+            dados = dataset[(dataset.Natureza == natureza) & (
+                dataset.Regioes == regioes)].sort_values("Ano")
             # exibe a tabela no terminal
             print("TABELA\n", dados.head(20))
             # envia os dados para a construcao do grafico com matplotlib
@@ -69,7 +55,7 @@ class Ui_MainWindow(object):
             plt.xticks(rotation=90)
             plt.title(natureza + " " + regioes, fontsize=14)
             plt.xlabel("Ano", fontsize=10)
-            plt.ylabel("numeros de:" + natureza, fontsize=10);
+            plt.ylabel("numeros de:" + natureza, fontsize=10)
             # apresenta o grafico
             plt.show()
 
@@ -82,7 +68,8 @@ class Ui_MainWindow(object):
         MainWindow.setMaximumSize(QtCore.QSize(1100, 800))
         icon = QtGui.QIcon()
         # adiciona um icon no canto superior esquerdo da janela principal
-        icon.addPixmap(QtGui.QPixmap(":/login/images/datasets.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/login/images/datasets.png"),
+                       QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setStyleSheet("background-color: rgb(0, 85, 0);")
@@ -126,7 +113,8 @@ class Ui_MainWindow(object):
                                            "    background-color: rgb(232, 232, 232);\n"
                                            "}")
         self.comboBox_tabela.setObjectName("comboBox_tabela")
-        self.comboBox_tabela.addItems(["selecione", "ocorrencias_mensais_crimes_sp.csv"])
+        self.comboBox_tabela.addItems(
+            ["selecione", "ocorrencias_mensais_crimes_sp.csv"])
 
         self.comboBox_natureza = QtWidgets.QComboBox(self.frame_inferior2)
         self.comboBox_natureza.setGeometry(QtCore.QRect(290, 40, 230, 20))
@@ -201,37 +189,43 @@ class Ui_MainWindow(object):
 
         self.frame_inferior_2 = QtWidgets.QFrame(self.framefundo)
         self.frame_inferior_2.setGeometry(QtCore.QRect(52, 547, 996, 31))
-        self.frame_inferior_2.setStyleSheet("background-color: rgb(28, 138, 219);")
+        self.frame_inferior_2.setStyleSheet(
+            "background-color: rgb(28, 138, 219);")
         self.frame_inferior_2.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_inferior_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_inferior_2.setObjectName("frame_inferior_2")
 
         self.label_tabela = QtWidgets.QLabel(self.frame_inferior_2)
         self.label_tabela.setGeometry(QtCore.QRect(30, 10, 200, 20))
-        self.label_tabela.setStyleSheet("font: 75 12pt \"Microsoft New Tai Lue\";\n""")
+        self.label_tabela.setStyleSheet(
+            "font: 75 12pt \"Microsoft New Tai Lue\";\n""")
         self.label_tabela.setObjectName("label_tabela")
 
         self.label_natureza = QtWidgets.QLabel(self.frame_inferior_2)
         self.label_natureza.setGeometry(QtCore.QRect(290, 10, 200, 20))
-        self.label_natureza.setStyleSheet("font: 75 12pt \"Microsoft New Tai Lue\";\n""")
+        self.label_natureza.setStyleSheet(
+            "font: 75 12pt \"Microsoft New Tai Lue\";\n""")
         self.label_natureza.setObjectName("label_natureza")
 
         self.label_regioes = QtWidgets.QLabel(self.frame_inferior_2)
         self.label_regioes.setGeometry(QtCore.QRect(550, 10, 200, 20))
-        self.label_regioes.setStyleSheet("font: 75 12pt \"Microsoft New Tai Lue\";\n""")
+        self.label_regioes.setStyleSheet(
+            "font: 75 12pt \"Microsoft New Tai Lue\";\n""")
         self.label_regioes.setObjectName("label_regioes")
 
         self.frame_superior = QtWidgets.QFrame(self.framefundo)
         self.frame_superior.setGeometry(QtCore.QRect(-1, 0, 1100, 80))
         self.frame_superior.setMaximumSize(QtCore.QSize(1100, 80))
-        self.frame_superior.setStyleSheet("background-color: rgb(16, 80, 127);")
+        self.frame_superior.setStyleSheet(
+            "background-color: rgb(16, 80, 127);")
         self.frame_superior.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_superior.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_superior.setObjectName("frame_superior")
 
         self.label_titulo = QtWidgets.QLabel(self.frame_superior)
         self.label_titulo.setGeometry(QtCore.QRect(277, 30, 545, 30))
-        self.label_titulo.setStyleSheet("font: 75 22pt \"MS Sans Serif\";\n""color: rgb(255, 255, 255);")
+        self.label_titulo.setStyleSheet(
+            "font: 75 22pt \"MS Sans Serif\";\n""color: rgb(255, 255, 255);")
         self.label_titulo.setObjectName("label_titulo")
 
         self.frame_erro = QtWidgets.QFrame(self.frame_superior)
@@ -312,11 +306,16 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "DATASET"))
         self.pushButton_consulta.setText(_translate("MainWindow", "CONSULTAR"))
-        self.label_tabela.setText(_translate("MainWindow", "Selecionar Tabela de Dados"))
-        self.label_natureza.setText(_translate("MainWindow", "Selecionar Natureza"))
-        self.label_regioes.setText(_translate("MainWindow", "Selecionar Regiões"))
-        self.label_titulo.setText(_translate("MainWindow", "Consulta do Dataset Crime em Sao Paulo"))
-        self.label_erro.setText(_translate("MainWindow", "ERROR OS DADOS NAO FORAM SELECIONADOS"))
+        self.label_tabela.setText(_translate(
+            "MainWindow", "Selecionar Tabela de Dados"))
+        self.label_natureza.setText(_translate(
+            "MainWindow", "Selecionar Natureza"))
+        self.label_regioes.setText(_translate(
+            "MainWindow", "Selecionar Regiões"))
+        self.label_titulo.setText(_translate(
+            "MainWindow", "Consulta do Dataset Crime em Sao Paulo"))
+        self.label_erro.setText(_translate(
+            "MainWindow", "ERROR OS DADOS NAO FORAM SELECIONADOS"))
 
 
 if __name__ == "__main__":
