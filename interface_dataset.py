@@ -36,11 +36,9 @@ class Ui_MainWindow(object):
             texto = ""
 
             regiaoCentroOeste = ["Bauru"]
-            regiaoNoroeste = ["Ara�atuba",
-                              "Piracicaba", "S�o Jos� do Rio Preto"]
+            regiaoNoroeste = ["Ara�atuba", "Piracicaba", "S�o Jos� do Rio Preto"]
             regiaoOeste = ["Presidente Prudente"]
-            regiaoSudeste = ["Ribeir�o Preto", "Campinas", "Sorocaba",
-                             "Grande S�o Paulo (exclui a Capital)", "Capital"]
+            regiaoSudeste = ["Ribeir�o Preto", "Campinas", "Sorocaba", "Grande S�o Paulo (exclui a Capital)", "Capital"]
             regiaoSul = ["Santos"]
 
             if(regiao == "Região Centro Oeste"):
@@ -373,7 +371,7 @@ class Ui_MainWindow(object):
             "MainWindow", "Selecionar Tabela de Dados"))
         self.label_natureza.setText(_translate(
             "MainWindow", "Selecionar Natureza"))
-        self.label_soma.setText(_translate("MainWindow", "Soma"))
+        self.label_soma.setText(_translate("MainWindow", " "))
         self.label_regiao.setText(_translate(
             "MainWindow", "Selecionar Regiao"))
         self.label_titulo.setText(_translate(
