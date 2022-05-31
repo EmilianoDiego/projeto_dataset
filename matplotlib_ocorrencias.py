@@ -8,7 +8,7 @@ from pylab import plot, show
 
 
 class crime:
-    dataset = pd.read_csv("csv/ocorrencias_mensais_crimes_sp.csv",encoding="latin-1")
+    dataset = pd.read_csv("projeto_dataset/csv/ocorrencias_mensais_crimes_sp.csv",encoding="latin-1")
 
     nome = "HOMICÍDIO DOLOSO"
     cidade = "São Paulo"
@@ -16,7 +16,7 @@ class crime:
     dados = dataset[(dataset.Natureza == nome) & (dataset.Cidade == cidade)].sort_values("Ano")
     dados2 = dataset[(dataset.Natureza == "TENTATIVA DE HOMICÍDIO") & (dataset.Cidade == cidade)].sort_values("Ano")
     dados3 = dataset[(dataset.Natureza == "LESÃO CORPORAL CULPOSA POR ACIDENTE DE TRÂNSITO") & (dataset.Cidade == cidade)].sort_values("Ano")
-    print(dados[" Jan"])
+    print(dados["Jan"])
 
     plt.style.use("ggplot")
     #configurar o tamanho do grafico

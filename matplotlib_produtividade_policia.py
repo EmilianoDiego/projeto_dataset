@@ -6,7 +6,7 @@ import seaborn as sns
 
 
 
-dataframe = pd.read_csv("csv/ds_SSP_PolicyProductivity_SP-BR_utf8_2001-2021_v5.csv", encoding="utf-8")
+dataframe = pd.read_csv("projeto_dataset/csv/ds_SSP_PolicyProductivity_SP-BR_utf8_2001-2021_v5.csv", encoding="utf-8")
 
 cidade = "São Paulo"
 natureza = "OCORRÊNCIAS DE PORTE DE ENTORPECENTES"
