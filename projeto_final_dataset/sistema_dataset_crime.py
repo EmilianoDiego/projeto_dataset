@@ -1725,15 +1725,15 @@ class Ui_MainWindow(object):
         self.label_resuPrevisao.setObjectName("label_resuPrevisao")
 
         self.label_ano2021 = QtWidgets.QLabel(self.frame_resultadoPrevisao)
-        self.label_ano2021.setGeometry(QtCore.QRect(30, 30, 71, 21))
+        self.label_ano2021.setGeometry(QtCore.QRect(30, 30, 80, 21))
         self.label_ano2021.setObjectName("label_ano2021")
 
         self.label_ano2022 = QtWidgets.QLabel(self.frame_resultadoPrevisao)
-        self.label_ano2022.setGeometry(QtCore.QRect(120, 30, 71, 21))
+        self.label_ano2022.setGeometry(QtCore.QRect(120, 30, 80, 21))
         self.label_ano2022.setObjectName("label_ano2022")
 
         self.label_ano2023 = QtWidgets.QLabel(self.frame_resultadoPrevisao)
-        self.label_ano2023.setGeometry(QtCore.QRect(210, 30, 71, 21))
+        self.label_ano2023.setGeometry(QtCore.QRect(210, 30, 80, 21))
         self.label_ano2023.setObjectName("label_ano2023")
 
         self.label_resultadoAno1 = QtWidgets.QLabel(self.frame_resultadoPrevisao)
@@ -1755,12 +1755,12 @@ class Ui_MainWindow(object):
         self.label_resultadoAno3.setObjectName("label_resultadoAno3")
 
         self.label_nivelConfianca = QtWidgets.QLabel(self.frame_resultadoPrevisao)
-        self.label_nivelConfianca.setGeometry(QtCore.QRect(30, 90, 111, 21))
+        self.label_nivelConfianca.setGeometry(QtCore.QRect(30, 90, 150, 21))
         self.label_nivelConfianca.setStyleSheet("background-color: transparent;")
         self.label_nivelConfianca.setObjectName("label_nivelConfianca")
 
         self.label_resuConfianca = QtWidgets.QLabel(self.frame_resultadoPrevisao)
-        self.label_resuConfianca.setGeometry(QtCore.QRect(150, 80, 120, 41))
+        self.label_resuConfianca.setGeometry(QtCore.QRect(200, 80, 130, 41))
         self.label_resuConfianca.setStyleSheet("color: rgb(170, 0, 0);\n"
 "font: 87 10pt \"Arial Black\";")
         self.label_resuConfianca.setObjectName("label_resuConfianca")
